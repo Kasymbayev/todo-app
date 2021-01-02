@@ -17,6 +17,7 @@ export default class AddItem extends Component {
     e.preventDefault();
     if (this.state.label.length) {
       this.props.onAdd(this.state.label);
+
       this.setState({
         label: ''
       })
@@ -34,6 +35,7 @@ export default class AddItem extends Component {
                 value={label}
                 onChange={this.onLabelChange}
         />
+
         <button type="submit"
                 className="btn btn-outline-secondary add-item">Добавить</button>
       </form>
